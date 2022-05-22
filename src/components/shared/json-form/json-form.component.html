@@ -1,0 +1,36 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div *ngFor="let control of jsonFormData?.controls">
+
+        <mat-form-field class="is-fullwidth" appearance="fill" *ngIf="
+        [
+          'text',
+          'password',
+          'email',
+          'number',
+          'search',
+          'tel',
+          'url'
+        ].includes(control.type)
+      ">
+            <mat-label>{{ control.label }}</mat-label>
+            <input matInput [type]="control.type" [formControlName]="control.name" [value]="control.value" autocomplete="off" />
+        </mat-form-field>
+        <mat-form-field appearance="fill" *ngIf="control.type === 'textarea'">
+            <mat-label>{{ control.label }}</mat-label>
+            <textarea matInput [formControlName]="control.name" [value]="control.value" autocomplete="off"></textarea>
+        </mat-form-field>
+        <div *ngIf="control.type === 'toggle'">
+            <mat-label>{{ control.label }}</mat-label>
+            <mat-slide-toggle [formControlName]="control.name" [checked]="control.value">
+                Active</mat-slide-toggle>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-3 is-offset-3 has-text-right">
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+        </div>
+        <div class="column">
+            <button mat-stroked-button mat-dialog-close color="accent">Cancel</button>
+        </div>
+    </div>
+</form>

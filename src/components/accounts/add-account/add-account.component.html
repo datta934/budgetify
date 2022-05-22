@@ -1,0 +1,14 @@
+<div class="account-type">
+    <h2 mat-dialog-title>Add Account</h2>
+    <mat-dialog-content>
+        <mat-form-field appearance="fill">
+            <mat-label>Select type of account</mat-label>
+            <mat-select [(ngModel)]="accountType" (ngModelChange)="onTypeChange($event)">
+                <mat-option *ngFor="let account of accountTypes" [value]="account.type">
+                    {{account.type}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-dialog-content>
+    <app-json-form [jsonFormData]="formData" (submittedData)="submitData($event)"></app-json-form>
+</div>

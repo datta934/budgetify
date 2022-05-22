@@ -1,0 +1,56 @@
+{
+    "controls": [
+        {
+            "name": "date",
+            "label": "Date Purchased:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "amount",
+            "label": "Amount:",
+            "value": "",
+            "type": "number",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "script",
+            "label": "Script:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "units",
+            "label": "Units:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "unitPrice",
+            "label": "Unit Price:",
+            "value": "",
+            "type": "number",
+            "validators": {
+                "required": true
+            }
+        },        
+        {
+            "name": "notes",
+            "label": "Notes",
+            "value": "",
+            "type": "textarea",
+            "validators": {}
+        }       
+    ]
+}

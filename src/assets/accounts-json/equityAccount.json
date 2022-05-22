@@ -1,0 +1,45 @@
+{
+    "controls": [
+        {
+            "name": "name",
+            "label": "Equity name:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "dpNumber",
+            "label": "Depository Number:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "fundBalance",
+            "label": "Balance:",
+            "value": "",
+            "type": "number",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "otherDetails",
+            "label": "Notes",
+            "value": "",
+            "type": "textarea",
+            "validators": {}
+        },
+        {
+            "name": "active",
+            "label": "Is account active?",
+            "value": "true",
+            "type": "toggle",
+            "validators": {}
+        }
+    ]
+}

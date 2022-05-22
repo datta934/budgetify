@@ -1,0 +1,56 @@
+{
+    "controls": [
+        {
+            "name": "creditCardName",
+            "label": "Card Name:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "cardNumber",
+            "label": "Card Number:",
+            "value": "",
+            "type": "number",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "notes",
+            "label": "Notes",
+            "value": "",
+            "type": "textarea",
+            "validators": {}
+        },
+        {
+            "name": "agreeTerms",
+            "label": "This is a checkbox?",
+            "value": "false",
+            "type": "checkbox",
+            "validators": {}
+        },
+        {
+            "name": "size",
+            "label": "",
+            "value": "",
+            "type": "range",
+            "options": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "icon": "sunny"
+            },
+            "validators": {}
+        },
+        {
+            "name": "active",
+            "label": "Do you like toggles?",
+            "value": "false",
+            "type": "toggle",
+            "validators": {}
+        }
+    ]
+}

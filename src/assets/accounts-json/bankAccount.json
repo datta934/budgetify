@@ -1,0 +1,46 @@
+{
+    "controls": [
+        {
+            "name": "name",
+            "label": "Bank name:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "accountNumber",
+            "label": "Account Number:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "fundBalance",
+            "label": "Account Balance:",
+            "value": 0,
+            "type": "number",
+            "validators": {
+                "required": true,
+                "type": "number"
+            }
+        },
+        {
+            "name": "otherDetails",
+            "label": "Notes",
+            "value": "",
+            "type": "textarea",
+            "validators": {}
+        },
+        {
+            "name": "active",
+            "label": "Is account active?",
+            "value": true,
+            "type": "toggle",
+            "validators": {}
+        }
+    ]
+}
