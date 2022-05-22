@@ -35,7 +35,7 @@ import { GetTransactionsComponent } from 'src/components/transactions/get-transa
     MaterialExampleModule,
     HttpClientModule
   ],
-  providers: [AppService, AccountService, { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2500 }}],
+  providers: [AppService, AccountService, { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2500 } }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
