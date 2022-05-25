@@ -16,6 +16,15 @@ import { GetAccountsComponent } from 'src/components/accounts/get-accounts/get-a
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { AddTransactionComponent } from 'src/components/transactions/add-transaction/add-transaction.component';
 import { GetTransactionsComponent } from 'src/components/transactions/get-transactions/get-transactions.component';
+
+
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
+
+import { EffectsModule } from '@ngrx/effects';
+import { metaReducers, reducers } from './../reducers/index';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +42,23 @@ import { GetTransactionsComponent } from 'src/components/transactions/get-transa
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialExampleModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true,
+        strictActionSerializability: true,
+        strictStateSerializability: true
+      }
+    }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([]),
+    // EntityDataModule.forRoot({}),
+    StoreRouterConnectingModule.forRoot({
+      stateKey: 'router',
+      routerState: RouterState.Minimal
+    })
   ],
   providers: [AppService, AccountService, { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 2500 } }],
   bootstrap: [AppComponent]
